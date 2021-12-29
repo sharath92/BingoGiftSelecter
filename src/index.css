@@ -1,13 +1,249 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: repeating-linear-gradient(-45deg, transparent, lightgrey 800px, transparent );
 }
+
+.container {
+  max-width: 80%;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 20px solid steelblue;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image{
+  border-radius: 15px;
+  height: auto;
+  width: auto;
+}
+
+.gift-image{
+  width: 250px;
+  height: 300px;
+  max-width: 250px;
+  max-height: 350px;
+  box-shadow: 0px 0px 5px 1px rgb(42 44 44 / 20%);
+}
+
+.rowC{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.gift {
+  background: #ffffff;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 1px rgb(42 44 44 / 20%);;
+  transition: linear 1s;
+}
+
+.gift-details {
+  background: #f1f1f1;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: linear 1s;
+
+}
+
+.assigned{
+  opacity: 20%;
+  cursor: not-allowed;
+  border-left: 50px black solid;
+  transition: linear 0.3s;
+}
+
+.mystery{
+   filter: blur(10px); 
+}
+.mystery-glow{
+  box-shadow: 0px 0px 20px 10px orange;
+}
+
+/*
+.gift.reminder {
+  border-left: 5px solid green;
+}
+
+.gift h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 0px 10px;
+  font-weight: bolder;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 45px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 30px;
+  border-radius: 5px;
+  display: flex;
+  
+}
+
+ .form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+} */
+
+
+/* .bingo {
+  width: 800px;
+  height: 100px;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bingo::before{
+  content: "";
+  background-image: conic-gradient(
+      rgb(255, 145, 0) 20deg,
+      transparent 120deg
+  );
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 5s linear infinite;
+}
+.bingo::after{
+  content: "BINGO";
+   content:url("C:\Users\scmum\bingo-gift-picker\public\DNCTLogo.JPG"); 
+
+  width: 790px;
+  height: 90px;
+  background: #ffffff;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffc400;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  box-shadow: inset 2px 2px 2px #0000008c;
+}
+
+/* 
+.page-header-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  box-shadow: -1px 5px 7px 1px rgb(42 44 44 / 20%);
+  border-radius: 10px;
+  border: 0px solid black;
+  background-image: conic-gradient(rgb(0, 0, 161), transparent, rgb(255, 166, 0));
+  animation: rotate 1s linear infinite;
+}
+
+.page-header-inner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: -5px;
+  color: rgb(0, 0, 0);
+  box-shadow: -1px 5px 7px 1px rgb(42 44 44 / 20%);
+  border-radius: 10px;
+  background-color: white;
+} 
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+ 
+}
+ */
